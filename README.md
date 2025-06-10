@@ -3,6 +3,7 @@
 :arrow_lower_right: Project structure
 
 - `tests/` — a directory with educational and practical tests:
+- `Object=learn` - use Object in the tests
   - `arrow_function/` — tasks on arrow functions
   - `css_learn/` — practice on CSS selectors
   - `locators-webdriverio/` — examples of WebdriverIO locators
