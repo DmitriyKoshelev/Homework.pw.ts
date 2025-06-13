@@ -10,7 +10,6 @@ test('ob-02 User Registration Page, us classes', {tag: "@reguser"}, async ({ pag
 
     await page.goto("https://demo.learnwebdriverio.com/login");
 
-    // await registerPage.usernameInputLocator.fill("testuser");
     await registerPage.emailInputLocator.fill("test@gm.com");
     await registerPage.passwordInputLocator.fill("password123");
     await registerPage.singUpButtonLocator.click();
@@ -21,9 +20,6 @@ test('ob-02 User Registration Page, us classes', {tag: "@reguser"}, async ({ pag
     await checkTags.clickPopularTagLocator.click();
     await checkTags.clickSomeTitleLocator.click();
     await expect(page.getByRole('link', { name: 'test', exact: true })).toBeVisible();
-
-
-
 });
 
 
