@@ -17,11 +17,11 @@ test('uslog-02 User login on site', {tag: "@uslogin"}, async ({ page }) => {
     await loginPage.login(userLoginData.username, userLoginData.password);
     await expect(page.locator('.inventory_list')).toBeVisible();
 
-    // Добавить товар в корзину и начать оформление
+    // add product to basket
   await basketPage.addFirstItemCart();
   await expect(page).toHaveURL(/checkout-step-one/);
 
-  // Ввод данных покупателя
+  // entering buyer data
   await basketPage.fillCheckoutForm('Im', 'Cool', '12345');
   await expect(page).toHaveURL(/checkout-step-two/);
   await expect(page.locator('.summary_info')).toBeVisible();
