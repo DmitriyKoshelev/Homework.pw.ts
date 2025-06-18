@@ -26,7 +26,7 @@ test('uslog-02 User login on site', {tag: "@uslogin"}, async ({ page }) => {
   await expect(page).toHaveURL(/checkout-step-two/);
   await expect(page.locator('.summary_info')).toBeVisible();
 
-  // Завершить заказ
+  // end order
   await basketPage.finishOrder();
   await expect(page.locator('#checkout_complete_container')).toBeVisible();
   await expect(page.locator('.complete-header')).toHaveText('Thank you for your order!');
